@@ -10,17 +10,59 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_10_211819) do
+ActiveRecord::Schema.define(version: 2021_11_16_125129) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "basket_products", force: :cascade do |t|
+    t.bigint "bench_merchandise_id", null: false
+    t.bigint "basket_id", null: false
+    t.integer "quantity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["basket_id"], name: "index_basket_products_on_basket_id"
+    t.index ["bench_merchandise_id"], name: "index_basket_products_on_bench_merchandise_id"
+  end
+
+  create_table "baskets", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "bench_merchandises", force: :cascade do |t|
+    t.bigint "bench_id", null: false
+    t.bigint "merchandise_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["bench_id"], name: "index_bench_merchandises_on_bench_id"
+    t.index ["merchandise_id"], name: "index_bench_merchandises_on_merchandise_id"
+  end
+
   create_table "benches", force: :cascade do |t|
     t.float "longitude"
     t.float "latitude"
-    t.text "description"
-    t.string "inscription"
+    t.text "inscription"
     t.integer "comfort_rating"
+    t.string "dedication"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_benches_on_user_id"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "bench_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["bench_id"], name: "index_favorites_on_bench_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "merchandises", force: :cascade do |t|
+    t.string "item"
+    t.float "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -33,8 +75,18 @@ ActiveRecord::Schema.define(version: 2021_10_10_211819) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "basket_id"
+    t.index ["basket_id"], name: "index_users_on_basket_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "basket_products", "baskets"
+  add_foreign_key "basket_products", "bench_merchandises"
+  add_foreign_key "bench_merchandises", "benches"
+  add_foreign_key "bench_merchandises", "merchandises"
+  add_foreign_key "benches", "users"
+  add_foreign_key "favorites", "benches"
+  add_foreign_key "favorites", "users"
+  add_foreign_key "users", "baskets"
 end

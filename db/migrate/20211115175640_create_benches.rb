@@ -3,9 +3,10 @@ class CreateBenches < ActiveRecord::Migration[6.0]
     create_table :benches do |t|
       t.float :longitude
       t.float :latitude
-      t.text :description
-      t.string :inscription
+      t.text :inscription
       t.integer :comfort_rating
+      t.string :dedication
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
