@@ -2,7 +2,7 @@
   <% @benches.each do |bench| %>
       <div class="news-card">
         <a href="#" class="news-card__card-link"></a>
-        <%= image_tag 'banner-bench.png', class: 'news-card__image' %>
+        <%= cl_image_tag bench.photo.key, class: "news-card__image" %>
         <div class="news-card__text-wrapper p-3">
           <p class="news-card__title"><%= bench.dedication %></p>
           <div class="news-card__post-date">Jan 29, 2018</div>
