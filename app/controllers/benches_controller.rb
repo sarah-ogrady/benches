@@ -5,7 +5,8 @@ class BenchesController < ApplicationController
       {
         lat: bench.latitude,
         lng: bench.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { bench: bench })
+        info_window: render_to_string(partial: "info_window", locals: { bench: bench }),
+        image_url: helpers.asset_url("bench-marker.png")
       }
     end
   end
