@@ -4,13 +4,13 @@
 
 .mapboxgl-popup-content {
   background: transparent;
-  padding: 0;
+  padding: 26px 0;
   border-radius: 0;
   box-shadow: none;
 }
 
 .mapboxgl-popup {
-  max-width: unset;
+  max-width: 300px !important;
 }
 
 .mapboxgl-popup-tip {
