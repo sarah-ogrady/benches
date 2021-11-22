@@ -195,5 +195,15 @@ merch8.photo.attach(io: file, filename: "merch#{merch8}.png", content_type: 'ima
 
 puts "... merch #{merch8.id} completed"
 
+merch9 = Merchandise.create!(
+    item: "towel",
+    price: 14
+  )
+
+file = URI.open('https://images.unsplash.com/photo-1583294506577-7f1217aca9fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dG93ZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
+merch9.photo.attach(io: file, filename: "merch#{merch9}.png", content_type: 'image/png')
+
+puts "... merch #{merch9.id} completed"
+
 puts "Finish making some sweet sweet merch"
 

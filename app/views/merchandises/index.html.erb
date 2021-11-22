@@ -5,10 +5,13 @@
       <%= cl_image_tag merch.photo.key, width: 400, height: 300, crop: :fill, class: "news-card__image" %>
       <div class="news-card__text-wrapper p-3">
         <p class="news-card__title"><%= merch.item.capitalize %></p>
-        <div class="news-card__post-date">£<%= merch.price.round %></div>
+        <div class="news-card__post-date"><p><%= humanized_money_with_symbol(merch.price) %></p></div>
         <div class="news-card__details-wrapper">
           <p class="news-card__excerpt"></p>
-          <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+          <%= link_to merchandise_path(merch), class: "d-flex news-card__read-more" do %>
+            <p class="m-0">Read more</p>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          <% end %>
         </div>
       </div>
     </div>
