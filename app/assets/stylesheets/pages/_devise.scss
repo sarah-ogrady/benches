@@ -1,0 +1,41 @@
+.form-input {
+  background: $light-grey;
+  border: 1px solid $light-grey;
+  height: 58px;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  transition: border 0.5s ease;
+  &:focus {
+    box-shadow: none;
+    border: 1px solid $grey-text;
+    background-color: $light-grey
+  }
+}
+
+.form-input::placeholder {
+  color: $grey-text;
+}
+
+.devise-title {
+  font-size: 54px;
+}
+
+.devise-small-text {
+  font-size: 12px;
+}
+
+.devise-min-height {
+  min-height: calc(100vh - 66.23px);
+}
+
+.devise-wrapper {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  @include media-breakpoint-down(sm) {
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+  }
+}
