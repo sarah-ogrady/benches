@@ -1,0 +1,10 @@
+.benches-primary-btn {
+  background-color: $primary;
+  color: $white;
+  padding: 10px 26px;
+  border-radius: 8px;
+  &:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+  }
+}
