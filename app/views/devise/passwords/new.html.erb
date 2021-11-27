@@ -1,18 +1,28 @@
-<h2>Forgot your password?</h2>
+<div class="devise-wrapper devise-min-height" style="background-image: url(<%= asset_path 'devise-benches.svg' %>)">
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-12 col-sm-10 col-md-6 col-lg-5">
+        <h2 class="devise-title mb-5">forgot password?</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
+        <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
+          <div class="form-inputs">
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        label: false,
+                        placeholder: 'email',
+                        input_html: { autocomplete: "email", class: "form-input" } %>
+          </div>
+          <div class="form-actions">
+            <%= f.button :submit, "Send me reset password instructions", class: 'btn benches-primary-btn' %>
+          </div>
+        <% end %>
+        <div class="my-3">
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
