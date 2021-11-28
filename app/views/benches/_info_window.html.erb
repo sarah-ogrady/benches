@@ -6,7 +6,10 @@
     <div class="news-card__post-date">Jan 29, 2018</div>
     <div class="news-card__details-wrapper">
       <p class="news-card__excerpt"><%= bench.inscription %></p>
-      <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+      <%= link_to bench_path(bench), class: "d-flex news-card__read-more" do %>
+        <p class="m-0">Read more</p>
+        <i class="fas fa-long-arrow-alt-right"></i>
+      <% end %>
     </div>
   </div>
 </div>
