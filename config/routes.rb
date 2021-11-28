@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   mount StripeEvent::Engine, at: '/stripe-webhooks'
   root to: 'pages#home'
-  resources :benches, only: [ :index, :show ]
+  resources :benches, only: [ :index, :show, :create, :update ]
   resources :merchandises, only: [ :index, :show ]
   resources :orders, only: [:show, :create] do
     resources :payments, only: :new
