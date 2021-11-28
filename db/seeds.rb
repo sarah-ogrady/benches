@@ -117,7 +117,8 @@ puts "creating some sweet sweet merch"
 
 merch1 = Merchandise.create!(
     item: "keyring",
-    price: 5
+    price: 5,
+    sku: "keyring"
   )
 
 file = URI.open('https://image.shutterstock.com/image-photo/key-chain-space-text-isolated-260nw-276907121.jpg')
@@ -127,7 +128,8 @@ puts "... merch #{merch1.id} completed"
 
 merch2 = Merchandise.create!(
     item: "rucksack",
-    price: 17
+    price: 17,
+    sku: "rucksack"
   )
 
 file = URI.open('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80')
@@ -137,7 +139,8 @@ puts "... merch #{merch2.id} completed"
 
 merch3 = Merchandise.create!(
     item: "jumper",
-    price: 15
+    price: 15,
+    sku: "jumper"
   )
 
 file = URI.open('https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3dlYXRzaGlydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
@@ -147,7 +150,8 @@ puts "... merch #{merch3.id} completed"
 
 merch4 = Merchandise.create!(
     item: "framed photo",
-    price: 3
+    price: 3,
+    sku: "framed_photo"
   )
 
 file = URI.open('https://images.unsplash.com/photo-1497296690583-da0e2a4ce49a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZnJhbWV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
@@ -157,7 +161,8 @@ puts "... merch #{merch4.id} completed"
 
 merch5 = Merchandise.create!(
     item: "pencil",
-    price: 1
+    price: 1,
+    sku: "pencil"
   )
 
 file = URI.open('https://images.unsplash.com/photo-1483546363825-7ebf25fb7513?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTkzfHxob3Jpem9udGFsJTIwcGVuY2lsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
@@ -167,7 +172,8 @@ puts "... merch #{merch5.id} completed"
 
 merch6 = Merchandise.create!(
     item: "lighter",
-    price: 3
+    price: 3,
+    sku: "lighter"
   )
 
 file = URI.open('https://images.unsplash.com/photo-1575908539629-62b3f98d7b3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bGlnaHRlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
@@ -177,7 +183,8 @@ puts "... merch #{merch6.id} completed"
 
 merch7 = Merchandise.create!(
     item: "t-shirt",
-    price: 10
+    price: 10,
+    sku: "t_shirt"
   )
 
 file = URI.open('https://images.unsplash.com/photo-1581655353564-df123a1eb820?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dCUyMHNoaXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
@@ -187,7 +194,8 @@ puts "... merch #{merch7.id} completed"
 
 merch8 = Merchandise.create!(
     item: "cap",
-    price: 8
+    price: 8,
+    sku: "cap"
   )
 
 file = URI.open('https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
@@ -197,7 +205,8 @@ puts "... merch #{merch8.id} completed"
 
 merch9 = Merchandise.create!(
     item: "towel",
-    price: 14
+    price: 14,
+    sku: "towel"
   )
 
 file = URI.open('https://images.unsplash.com/photo-1583294506577-7f1217aca9fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dG93ZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')

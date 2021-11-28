@@ -94,7 +94,6 @@ ActiveRecord::Schema.define(version: 2021_11_27_174352) do
     t.string "state"
     t.string "merchandise_sku"
     t.integer "amount_cents", default: 0, null: false
-    t.string "amount_currency", default: "GBP", null: false
     t.string "checkout_session_id"
     t.bigint "user_id", null: false
     t.bigint "merchandise_id", null: false
