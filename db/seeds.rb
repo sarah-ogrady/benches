@@ -47,7 +47,7 @@ bench_two = Bench.create!(
     user: User.first
   )
 
-file = URI.open('https://images.unsplash.com/photo-1529858483845-477149308bea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2069&q=80')
+file = URI.open('https://images.unsplash.com/photo-1573493380834-bcfa84766e2e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80')
 bench_two.photo.attach(io: file, filename: "bench#{bench_two}.jpg", content_type: 'image/jpg')
 
 puts "... bench #{bench_two.id} completed"
@@ -61,7 +61,7 @@ bench_three = Bench.create!(
     user: User.first
   )
 
-file = URI.open('https://images.unsplash.com/photo-1529858483845-477149308bea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2069&q=80')
+file = URI.open('https://images.unsplash.com/photo-1588760716240-5b0065cf5ac3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')
 bench_three.photo.attach(io: file, filename: "bench#{bench_three}.png", content_type: 'image/png')
 
 
@@ -76,7 +76,7 @@ bench_four = Bench.create!(
     user: User.first
   )
 
-file = URI.open('https://images.unsplash.com/photo-1529858483845-477149308bea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2069&q=80')
+file = URI.open('https://images.unsplash.com/photo-1444492417251-9c84a5fa18e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')
 bench_four.photo.attach(io: file, filename: "bench#{bench_four}.png", content_type: 'image/png')
 
 
@@ -91,7 +91,7 @@ bench_five = Bench.create!(
     user: User.first
   )
 
-file = URI.open('https://images.unsplash.com/photo-1529858483845-477149308bea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2069&q=80')
+file = URI.open('https://images.unsplash.com/photo-1506899686410-4670690fccef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1675&q=80')
 bench_five.photo.attach(io: file, filename: "bench#{bench_five}.png", content_type: 'image/png')
 
 
@@ -106,7 +106,7 @@ bench_six = Bench.create!(
     user: User.first
   )
 
-file = URI.open('https://images.unsplash.com/photo-1529858483845-477149308bea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2069&q=80')
+file = URI.open('https://images.unsplash.com/photo-1573079883023-62fc208b9d75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 bench_six.photo.attach(io: file, filename: "bench#{bench_six}.png", content_type: 'image/png')
 
 puts "... bench #{bench_six.id} completed"
@@ -215,4 +215,3 @@ merch9.photo.attach(io: file, filename: "merch#{merch9}.png", content_type: 'ima
 puts "... merch #{merch9.id} completed"
 
 puts "Finish making some sweet sweet merch"
-

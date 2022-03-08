@@ -3,7 +3,14 @@ body {
   background-color: #FFFFFF;
 }
 
-
 .bench-banner {
   background-size: cover;
+  position: relative;
+  top: 100;
+}
+
+.position-buttons {
+  position: absolute;
+  top: 424px;
+  left: 620px;
 }
