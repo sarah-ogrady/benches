@@ -1,10 +1,64 @@
-.benches-primary-btn {
-  background-color: $primary;
-  color: $white;
-  padding: 10px 26px;
-  border-radius: 8px;
-  &:hover {
-    background-color: #000000;
-    color: #FFFFFF;
-  }
+.btn-sm {
+	cursor: pointer;
+    border-radius: 0px;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-size: 12px;
+    line-height: 19px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif; font-weight:400;
+    letter-spacing: 3px;
+    -webkit-transition: all .4s ease-in-out;
+       -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+         -o-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+}
+
+.btn-mid {
+    border: none;
+    border-radius: 0px;
+    text-decoration: none;
+    padding: 14px 21px;
+    font-size: 13px;
+    line-height: 25px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif; font-weight:400;
+    letter-spacing: 3px;
+    -webkit-transition: all .4s ease-in-out;
+       -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+         -o-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+}
+
+.btn-dark:hover {
+    -webkit-transition: all .4s ease-in-out;
+       -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+         -o-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+}
+
+.btn-dark {
+    // border:solid 2px #1f1f1f;
+    background: white;
+    color: #1f1f1f;
+}
+.btn-dark:hover,
+.btn-dark.active{
+    // border:solid 2px #1f1f1f;
+    background: #1f1f1f;
+    color: #fff;
+}
+
+.btn-white{
+    // border:solid 2px #fff;
+    background: black;
+    color: #fff !important;
+}
+.btn-white:hover{
+    // border:solid 2px #fff;
+    background: #fff;
+    color: #1f1f1f !important;
 }
